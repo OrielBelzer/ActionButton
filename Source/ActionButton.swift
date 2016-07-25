@@ -102,9 +102,11 @@ public class ActionButton: NSObject {
         self.parentView.addSubview(self.floatButton)
 
         self.contentView = UIView(frame: bounds)
-        self.blurVisualEffect = UIVisualEffectView(effect: UIBlurEffect(style: .ExtraLight))
-        self.blurVisualEffect.frame = self.contentView.frame
-        self.contentView.addSubview(self.blurVisualEffect)
+        self.contentView.backgroundColor = UIColor.clearColor()
+        self.contentView.alpha = 0.5
+        //self.blurVisualEffect = UIVisualEffectView(effect: UIBlurEffect(style: .ExtraLight))
+        //self.blurVisualEffect.frame = self.contentView.frame
+        //self.contentView.addSubview(self.blurVisualEffect)
         
         let tap = UITapGestureRecognizer(target: self, action: Selector("backgroundTapped:"))
         self.contentView.addGestureRecognizer(tap)
