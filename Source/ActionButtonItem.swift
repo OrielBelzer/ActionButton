@@ -89,7 +89,7 @@ public class ActionButtonItem: NSObject {
         if let text = optionalTitle where text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).isEmpty == false {
             self.label = UILabel()
             self.label.font = UIFont(name: "HelveticaNeue-Medium", size: 13)
-            self.label.textColor = UIColor.darkGrayColor()
+            self.label.textColor = UIColor.whiteColor()
             self.label.textAlignment = .Right
             self.label.text = text
             self.label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("labelTapped:")))
@@ -97,7 +97,7 @@ public class ActionButtonItem: NSObject {
             
             self.labelBackground = UIView()
             self.labelBackground.frame = self.label.frame
-            self.labelBackground.backgroundColor = UIColor.whiteColor()
+            self.labelBackground.backgroundColor = UIColor.clearColor()
             self.labelBackground.layer.cornerRadius = 3
             self.labelBackground.layer.shadowOpacity = 0.8
             self.labelBackground.layer.shadowOffset = CGSize(width: 0, height: 1)
