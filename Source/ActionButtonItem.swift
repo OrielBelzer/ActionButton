@@ -88,7 +88,7 @@ public class ActionButtonItem: NSObject {
                 
         if let text = optionalTitle where text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).isEmpty == false {
             self.label = UILabel()
-            self.label.font = UIFont(name: "HelveticaNeue-Medium", size: 13)
+            self.label.font = UIFont(name: "HelveticaNeue-Medium", size: 15)
             self.label.textColor = UIColor.whiteColor()
             self.label.textAlignment = .Right
             self.label.text = text
